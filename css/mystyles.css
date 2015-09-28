@@ -1,0 +1,111 @@
+h1 {
+  color: #ccc;
+  font-weight: 300;
+}
+
+figure {
+  margin: auto;
+}
+
+.content article {
+  padding: 100px 0;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*Parallax*/
+
+.bird-box {
+  position: relative;
+  height: 600px;
+  background-image: url('../images/bird-bg.jpg');
+  background-size: auto 600px;
+  background-position: top center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.logo {
+  height: 100px;
+  width:100%;
+  background-image: url('../images/black-bird-logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+}
+
+.fore-bird {
+  width: 960px;
+  height: 733px;
+  /*background-color: pink;*/
+  background-image: url(../images/fore-bird.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 385px;
+}
+
+.back-bird {
+  width: 960px;
+  height: 298px;
+  background-image: url(../images/back-bird.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: center;
+  right: 40%;
+}
+
+/*Model Grid*/
+
+.clothes-pics figure {
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.clothes-pics figure.is-showing {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.clothes-pics figure:hover figcaption {
+  left:0%;
+}
+
+img {
+  display: block;
+  transform: scale(1);
+  transition: all 0.7s ease-in-out;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  background: black;
+  color: white;
+  padding: 2px 8px;
+  font-weight: 10px;
+  transition: all 0.7s ease-in-out;
+}
+
+.large-window {
+  height: 640px;
+  background-image: url(../images/model2.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 20px;
+  border-radius: 100%;
+}
